@@ -1,0 +1,35 @@
+.container{
+    max-width: 1170px !important;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slick-prev, .slick-next {
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 9999px;
+    width: 36px;
+    height: 36px;
+    z-index: 20;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .slick-prev {
+    left: 15px; /* inside left */
+  }
+
+  .slick-next {
+    right: 15px; /* inside right */
+  }
+
+  .slick-prev::before,
+  .slick-next::before {
+    display: none;
+  }
