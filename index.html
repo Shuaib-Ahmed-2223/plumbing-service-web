@@ -13,26 +13,52 @@
     </title>
 </head>
 <body>
-  <header class="bg-[#FFF] shadow-[0px_4px_24px_0px_rgba(0,0,0,0.05)] h-[60px] sticky top-0 left-0 z-50 flex  items-center w-full">
-    <div class="container mx-auto">
-      <div class="flex justify-between items-center">
-        <div class="">
-          <img src="assets/img/plumminglogo.png" alt="">
-        </div>
-        <div class="">
-          <ul class="flex space-x-[37px] items-center">
-            <li><a href="./index.html" class="text-[#222] font-[Roboto] text-[14px] font-bold leading-normal hover:underline hover:decoration-[#DD3142] hover:decoration-5">Home</a></li>
-            <li><a href="./about.html" class="text-[#222] font-[Roboto] text-[14px] font-bold leading-normal hover:underline hover:decoration-[#DD3142] hover:decoration-5">About us</a></li>
-            <li><a href="./services.html" class="text-[#222] font-[Roboto] text-[14px] font-bold leading-normal hover:underline hover:decoration-[#DD3142] hover:decoration-5">Services</a></li>
-            <li><a href="./projects.html" class="text-[#222] font-[Roboto] text-[14px] font-bold leading-normal hover:underline hover:decoration-[#DD3142] hover:decoration-5">Projects</a></li>
-            <li><a href="./blogs.html" class="text-[#222] font-[Roboto] text-[14px] font-bold leading-normal hover:underline hover:decoration-[#DD3142] hover:decoration-5">Blogs</a></li>
-            <li><a href="./contact.html" class="text-[#222] font-[Roboto] text-[14px] font-bold leading-normal hover:underline hover:decoration-[#DD3142] hover:decoration-5">Contact</a></li>
-            <li><button class="bg-[#DD3142] text-[#FFF] text-[12px] pt-[12px] pb-[10px] pr-[8px] pl-[9px] font-roboto font-bold leading-normal rounded-sm flex justify-center items-center uppercase">Request a call back</button></li>
-          </ul>
-        </div>
+<header class="bg-[#FFF] shadow-[0px_4px_24px_0px_rgba(0,0,0,0.05)] sticky top-0 left-0 z-50 w-full">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center h-[60px] w-full">
+      <!-- Logo -->
+      <div>
+        <img src="assets/img/plumminglogo.png" alt="Logo" class="h-[40px]">
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-[37px] items-center">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./about.html" class="nav-link">About us</a></li>
+        <li><a href="./services.html" class="nav-link">Services</a></li>
+        <li><a href="./projects.html" class="nav-link">Projects</a></li>
+        <li><a href="./blogs.html" class="nav-link">Blogs</a></li>
+        <li><a href="./contact.html" class="nav-link">Contact</a></li>
+        <li><button class="bg-[#DD3142] text-white text-[12px] px-3 py-2 font-roboto font-bold rounded-sm uppercase">Request a call back</button></li>
+      </ul>
+
+      <!-- Hamburger Button (Mobile) -->
+      <div class="md:hidden">
+        <button id="menuToggle" class="text-[#222] focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
     </div>
-  </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden flex flex-col space-y-3 mt-4">
+      <a href="./index.html" class="nav-link">Home</a>
+      <a href="./about.html" class="nav-link">About us</a>
+      <a href="./services.html" class="nav-link">Services</a>
+      <a href="./projects.html" class="nav-link">Projects</a>
+      <a href="./blogs.html" class="nav-link">Blogs</a>
+      <a href="./contact.html" class="nav-link">Contact</a>
+      <button class="bg-[#DD3142] text-white text-[12px] px-3 py-2 font-roboto font-bold rounded-sm uppercase">
+        Request a call back
+      </button>
+    </div>
+
+  </div>
+</header>
 
   <div class="hero flex flex-col lg:flex-row  justify-between items-center container mx-auto pt-14">
     <div class="flex flex-col text-center lg:text-left mt-6 lg:mt-0">
@@ -54,7 +80,7 @@
 </div>
 
 <div class="flex flex-col md:flex-row justify-center items-center w-full bg-[#DD3142] pt-8 md:pt-[70px] pb-6 md:pb-[34px] px-4 sm:px-6 lg:px-8">
-  <div class="flex container mx-auto">
+  <div class="flex container mx-auto  md:flex-row flex-wrap ">
   <!-- Card 1 -->
   <div class="w-full md:w-1/3 flex flex-col justify-center items-center space-y-3 md:space-y-[17px] px-6 sm:px-[46px] py-4 border-b md:border-b-0 md:border-r-2 border-[#E6E6EB]">
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" class="md:w-12 md:h-12 lg:w-[51px] lg:h-[52px]" viewBox="0 0 51 52" fill="none">
@@ -105,16 +131,16 @@
           
   <div class="w-full min-h-[405px]  bg-[url('assets/img/welcomeplumber.png')] bg-cover bg-center relative">
     <div class="pt-10 sm:pt-14 md:pt-[51px]  ">
-      <div class="bg-white/70 p-8  flex flex-col justify-center w-[542px] h-[293px]" >
+      <div class="bg-white/70 p-8  flex flex-col justify-center max-w-[542px] max-h-[293px] " >
           <h2 class="font-[Roboto] text-2xl sm:text-3xl md:text-[44px] font-bold leading-tight">Welcome to
             Plumber Company</h2>
           <p class="text-[#000] font-[Roboto] text-[14px] font-normal leading-normal py-[12px]">Your trusted partner for fast, reliable, and professional plumbing services. Whether it's a minor repair or a major installation, our experienced team is here to ensure your plumbing works perfectly — every time. Proudly serving homes and businesses with quality you can count on.</p> 
-          <div class="w-[136px] h-[43px] text-white rounded-[35px] bg-[#DD3142] flex  justify-center items-center py-[17px] ">Learn More</div>
+          <div class="w-[100px] h-[20px]  sm:w-[120px] sm:h-[30px] md:w-[136px] md:h-[43px] text-white rounded-[35px] bg-[#DD3142] flex  justify-center items-center py-[17px] ">Learn More</div>
         </div>
   </div>
    
    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-    <img src="assets/img/video icon.png" alt="video icon"  class="w-12 h-12 sm:w-auto sm:h-auto" >
+    <img src="assets/img/video icon.png" alt="video icon"  class="w-auto h-auto sm:w-12 sm:h-12 md:w-14 md:h-14">
   </div>
   </div>
 </div>
@@ -137,17 +163,17 @@
     </div>              
     </div>  -->
 
-    <div class="bg-[#DD3142] h-[389px] flex items-center mt-19">
-      <div class="container mx-auto  h-[314px]">
-      <div class="flex justify-between">
-         <div class="w-[630px] h-[314px]">
+    <div class="bg-[#DD3142] h-auto md:h-[389px] flex items-center mt-19">
+      <div class="container mx-auto flex flex-col md:flex-row md:flex-wrap ">
+      <div class="flex justify-between gap-8 flex-col md:flex-row">
+         <div class="sm:flex sm:justify-center md:w-1/2 w-full">
             <img src="assets/img/companyhistory.png" alt="" >
          </div>
-         <div class="w-[424px]">
-          <h2 class="text-[#FFF] font-[Roboto] text-[44px] font-bold leading-normal ">Our Company History</h2>
-          <p class="text-[#FFF] font-[Roboto] text-[14px] font-normal leading-normal pb-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-          <h3 class="text-[#FFF] font-[Roboto] text-[30px] font-light leading-normal ">Trust Our Team of Experts</h3>
-          <p class="text-[#FFF] font-[Roboto] text-[14px] font-normal leading-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+         <div class="md:flex-row sm:justify-center  md:w-1/2 w-full p-2 sm:p-3">
+          <h2 class="text-[#FFF] font-[Roboto] text-[30px] sm:text-[35px] md:text-[44px]  font-bold leading-normal text-center sm:text-center">Our Company History</h2>
+          <p class="text-[#FFF] font-[Roboto] text-[10px] lg:text-[14px] font-normal leading-normal pb-6 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+          <h3 class="text-[#FFF] font-[Roboto] text-[30px] font-light leading-normal text-center sm:text-center">Trust Our Team of Experts</h3>
+          <p class="text-[#FFF] font-[Roboto] text-[10px] lg:text-[14px]  font-normal leading-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
          </div>
       </div>
     </div>
@@ -155,7 +181,7 @@
 
       <!-- Plumber Points -->
       <div class="pt-[87px]">
-        <div class="flex flex-col items-center justify-center gap-4  px-[135px]">
+        <div class="flex flex-col items-center justify-center gap-4  px-[135px] flex-wrap">
           <h2 class="text-center text-[#0E0E0E] font-[Roboto] font-semibold leading-normal text-[30px]">PLUMBER POINTS</h2>
           <p class="text-center text-[#6D6D6D] font-[Roboto] font-normal leading-[133.5%]">Why choose us? It’s simple. We offer upfront pricing, fast response times, and guaranteed workmanship on every job. From emergency repairs to scheduled maintenance, our plumbers go the extra mile to deliver quality service and lasting results you can trust.</p>
         </div>
@@ -228,7 +254,7 @@
           <p class="text-center text-[#6D6D6D] font-[Roboto] font-normal leading-[133.5%]">Behind every successful service is a passionate team. Our skilled plumbers and support staff are committed to delivering exceptional results with a personal touch. From the moment you contact us to the final inspection, we work together to ensure your experience is smooth, stress-free, and satisfying.</p>
         </div>
 
-      <div class="flex justify-center  py-[66px]">
+      <div class="flex justify-center  py-[66px] flex-wrap">
                       <div class="plumber-photo-and-btn flex flex-col items-center">
                         <img src="assets/img/dedicatedteam.png" alt="" class="w-[320px] h-[368px]">
                         <div class="min-w-[210px] min-h-[78px] bg-[#DD3142] flex flex-col justify-center items-center rounded-md ">
@@ -342,10 +368,10 @@
 
      
           <!-- Recent Blogs -->
-          <div class="py-[63px] px-[135px]">
-            <h2 class="text-[#0E0E0E] font-[Roboto] font-semibold leading-normal text-[30px] uppercase ">Our Recent Blogs</h2>
-            <div class="flex gap-12 
-            ">
+          <div class="py-2 sm:py-4 md:py-[63px] px-4 sm:px-8 md:px-[135px]">
+            <h2 class="text-[#0E0E0E] font-[Roboto] font-semibold leading-normal text-[20px] sm:text-[25px] md:text-[30px] uppercase flex justify-center sm:justify-center">Our Recent Blogs</h2>
+            <div class="flex gap-4 md:gap-12 
+            flex-col items-center md:flex-row">
           <div class="w-1/3 space-y-4 my-10">
             <img src="assets/img/Recentblog1.png" alt="" class="w-full">
             <p class="text-[#000] font-[Roboto] font-normal leading-tight text-[20px]">5 Signs You Need to Call a Plumber ASAP.
@@ -370,8 +396,8 @@
 
         <!-- Footer -->
         <div class="bg-[#000]  md:pt-[33px] relative w-full border-b border-white py-6">
-          <div class="flex  container mx-auto w-full justify-between">
-              <div class="w-5/12">
+          <div class="flex  container w-full items-center  md:justify-between flex-col md:flex-row ">
+              <div class="w-5/12 flex">
                       <div class="flex pb-[27.6px]">
                           <svg xmlns="http://www.w3.org/2000/svg" width="43" height="42" viewBox="0 0 43 42" fill="none">
                             <rect y="12.3994" width="29.4283" height="28.8932" fill="#DD3142"/>
@@ -391,7 +417,7 @@
                   <path d="M72 1.42062C71.4794 1.66154 70.9246 1.82123 70.3462 1.89877C70.9412 1.524 71.3954 0.935077 71.6089 0.225231C71.0541 0.574154 70.4416 0.820615 69.7889 0.958154C69.2621 0.366462 68.5114 0 67.6924 0C66.1034 0 64.8241 1.36062 64.8241 3.02862C64.8241 3.26862 64.8434 3.49938 64.8906 3.71908C62.5045 3.59631 60.3931 2.38985 58.9747 0.552C58.7271 1.00523 58.5819 1.524 58.5819 2.08246C58.5819 3.13108 59.0938 4.06062 59.8568 4.59877C59.3956 4.58954 58.9433 4.44831 58.56 4.22585C58.56 4.23508 58.56 4.24708 58.56 4.25908C58.56 5.73046 59.5549 6.95262 60.8595 7.23415C60.6259 7.30154 60.3712 7.33385 60.107 7.33385C59.9232 7.33385 59.7377 7.32277 59.5636 7.28215C59.9355 8.48123 60.9908 9.36277 62.2455 9.39138C61.269 10.1972 60.0291 10.6828 58.6869 10.6828C58.4515 10.6828 58.2257 10.6717 58 10.6412C59.2714 11.5062 60.7781 12 62.403 12C67.6845 12 70.572 7.38462 70.572 3.384C70.572 3.25015 70.5676 3.12092 70.5615 2.99262C71.1311 2.56615 71.6097 2.03354 72 1.42062Z" fill="#DD3142"/>
                 </svg>
               </div>
-              <div class="w-2/12">
+              <div class="w-2/12 pt-2 sm:pt-4 flex-col">
                 <h3 class="text-[#DD3142] font-[Roboto] text-[16px] font-bold leading-normal uppercase pb-[40px]">Our Services</h3>
                 <ul class="space-y-4">
                   <li class="text-[#FFF] font-[Roboto] text-[12px] font-normal leading-normal "><a href="">General Plumbing Repairs</a></li>
@@ -460,7 +486,7 @@
 
                <!-- Copyright -->
        <div class="mx-auto w-full gap-4 flex  items-center py-4  bg-black">
-        <div class="container mx-auto flex justify-between w-full">
+        <div class="container mx-auto flex  justify-center  md:justify-center items-center  md:justify-between w-full flex-col md:flex-row gap-4 md:gap-8">
             <p class="text-[#DD3142] font-[Roboto] text-[10px] font-normal leading-normal">©Copyright 2025 Shuaib.</p>
                 <div class="text-[#DD3142] font-[Roboto] text-[10px] font-normal leading-normal flex gap-8">
                   <a href=""> Term of Services</a>
@@ -505,7 +531,23 @@
           drawer.classList.add('-translate-x-full');
           overlay.classList.add('hidden');
         });
+
+
+
+
+
       </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuToggle.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+    });
+  });
+</script>
  
 </body>
 </html>
